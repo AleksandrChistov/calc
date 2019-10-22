@@ -5,6 +5,19 @@ import BtnTerm from '../btn-term/btn-term';
 function Calc(props) {
   const { state, changeRunner, changeTerm } = props;
   const sum = new Intl.NumberFormat('ru-RU').format(state.sum);
+  let increaseValue = new Intl.NumberFormat('ru-RU').format(state.sum / 100 * 25.69);
+  let increase = "25.69%";
+
+  state.arr.map(item => {
+    if (item.checked) {
+      increaseValue = state.sum / 100 * item.increase;
+      increaseValue = new Intl.NumberFormat('ru-RU').format(increaseValue);
+      increase = item.increase + "%";
+    }
+  });
+  
+  let divvyValue = +state.sum + (state.sum / 100 * parseFloat(increase));
+  divvyValue = new Intl.NumberFormat('ru-RU').format(divvyValue);
 
   return (
     <React.Fragment>
@@ -36,16 +49,16 @@ function Calc(props) {
           </div>
           <div className="wrap-increase-divvy">
             <p className="txt-increase-divvy">Прирост стоимости паев</p>
-            <p className="increase-divvy">256 900 &#8381;</p>
+            <p className="increase-divvy">{increaseValue} &#8381;</p>
             <hr className="hr-increase-divvy"/>
           </div>
           <hr className="line"/>
           <p className="txt-increase-divvy-percent">Прирост стоимости паев 
-            <span className="number-increase-divvy-percent"> 25,69%</span></p>
+            <span className="number-increase-divvy-percent"> {increase}</span></p>
           <hr className="line"/>
           <div className="wrap-divvy-value">
             <p className="txt-divvy-value">Стоимость паев</p>
-            <p className="divvy-value">1 256 900 &#8381;</p>
+            <p className="divvy-value">{divvyValue} &#8381;</p>
             <button className="btn-get">Получить</button>
           </div>
         </div>
