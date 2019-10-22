@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './calc.styl'
+import BtnTerm from '../btn-term/btn-term';
 
 function Calc(props) {
-  const { state, changeTerm } = props;
-  
+  const { state, changeRunner, changeTerm } = props;
   const sum = new Intl.NumberFormat('ru-RU').format(state.sum);
 
   return (
@@ -14,7 +14,7 @@ function Calc(props) {
           <div className="calc-left-top">
             <p className="txt-sum">Сумма для инвестирования</p>
             <p className="sum">{sum} &#8381;</p>
-            <input onChange={(e) => changeTerm(e.target.value)} className="runner" 
+            <input onChange={(e) => changeRunner(e.target.value)} className="runner" 
             type="range" min="0" max="3000000" value={state.sum} step="50000" style={{background:
               "-webkit-linear-gradient(left, #0093ff 0%, #0093ff "+state.sum * 0.1 / 3000+"%, #6E7E93 "+state.sum * 0.1 / 3000+"%, #6E7E93 100%)"
             }}></input>
@@ -26,16 +26,7 @@ function Calc(props) {
               <li className="amount-runner amount-runner-3000"><hr className="hr-amount-runner hr-amount-runner-3000"/> 3000 т.</li>
             </ul>
           </div>
-          <div className="calc-left-bottom">
-            <p className="term-invest">Срок инвестирования</p>
-            <ul className="wrap-invest-period">
-              <li className="btn-three-month btn-period">3 месяца</li>
-              <li className="btn-six-month btn-period">6 месяцев</li>
-              <li className="btn-one-year btn-period">1 год</li>
-              <li className="btn-two-years btn-period">2 года</li>
-              <li className="btn-three-years btn-period btn-period-active">3 года</li>
-            </ul>
-          </div>
+            <BtnTerm state={state} changeTerm={changeTerm}/>
         </div>
         <div className="calc-right">
           <div className="wrap-sum-invest">

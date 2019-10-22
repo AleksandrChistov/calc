@@ -2,13 +2,13 @@ import React from "react";
 import { connect } from 'react-redux';
 
 import Calc from '../components/calc/calc';
-import { changeTerm } from "../redux/actions/index";
+import { changeRunner, changeTerm } from "../redux/actions/index";
 
 let App = (props) => {
-  const { state, changeTerm } = props; 
+  const { state, changeRunner, changeTerm } = props; 
   return (
     <React.Fragment>
-      <Calc state={state} changeTerm={changeTerm}/>
+      <Calc state={state} changeRunner={changeRunner} changeTerm={changeTerm}/>
     </React.Fragment>
   )
 }
@@ -21,7 +21,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    changeTerm: (e) => dispatch(changeTerm(e))
+    changeRunner: (e) => dispatch(changeRunner(e)),
+    changeTerm: (id) => dispatch(changeTerm(id))
   }
 }
 
