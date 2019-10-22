@@ -15,7 +15,7 @@ function Calc(props) {
       increase = item.increase + "%";
     }
   });
-  
+
   let divvyValue = +state.sum + (state.sum / 100 * parseFloat(increase));
   divvyValue = new Intl.NumberFormat('ru-RU').format(divvyValue);
 
@@ -50,7 +50,7 @@ function Calc(props) {
           <div className="wrap-increase-divvy">
             <p className="txt-increase-divvy">Прирост стоимости паев</p>
             <p className="increase-divvy">{increaseValue} &#8381;</p>
-            <hr className="hr-increase-divvy"/>
+            <hr className="hr-increase-divvy" style={{borderTop: ""+25 / 100 * parseFloat(increase)+"px solid #0093ff"}}/>
           </div>
           <hr className="line"/>
           <p className="txt-increase-divvy-percent">Прирост стоимости паев 
