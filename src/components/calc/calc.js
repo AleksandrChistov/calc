@@ -14,7 +14,7 @@ function Calc(props) {
         <div className="calc-left">
           <div className="calc-left-top">
             <p className="txt-sum">Сумма для инвестирования</p>
-            <p className="sum">{state.sum}</p>
+            <p className="sum">{state.sum} &#8381;</p>
             <input onChange={(e) => changeTerm(e.target.value)} className="runner" 
             type="range" min="0" max="3000" value={state.sum} step="50"></input>
             <ul className="wrap-amount-runner">
@@ -39,12 +39,12 @@ function Calc(props) {
         <div className="calc-right">
           <div className="wrap-sum-invest">
             <p className="txt-sum-invest">Инвестиции</p>
-            <p className="sum-invest">{state.sum}</p>
+            <p className="sum-invest">{state.sum} &#8381;</p>
             <hr className="hr-sum-invest"/>
           </div>
           <div className="wrap-increase-divvy">
             <p className="txt-increase-divvy">Прирост стоимости паев</p>
-            <p className="increase-divvy">256 900</p>
+            <p className="increase-divvy">256 900 &#8381;</p>
             <hr className="hr-increase-divvy"/>
           </div>
           <hr className="line"/>
@@ -53,7 +53,7 @@ function Calc(props) {
           <hr className="line"/>
           <div className="wrap-divvy-value">
             <p className="txt-divvy-value">Стоимость паев</p>
-            <p className="divvy-value">1 256 900</p>
+            <p className="divvy-value">1 256 900 &#8381;</p>
             <button className="btn-get">Получить</button>
           </div>
         </div>
