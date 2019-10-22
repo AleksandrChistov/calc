@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from 'react-redux';
 
-import Header from '../components/calc/calc';
+import Calc from '../components/calc/calc';
 // import { load } from "../redux/actions/index";
 
 let App = (props) => {  
-  const { load } = props; 
+  // const { load } = props; 
   return (
     <React.Fragment>
       <Calc/>
