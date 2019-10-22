@@ -5,7 +5,7 @@ import Calc from '../components/calc/calc';
 import { changeTerm } from "../redux/actions/index";
 
 let App = (props) => {
-  const { state } = props; 
+  const { state, changeTerm } = props; 
   return (
     <React.Fragment>
       <Calc state={state} changeTerm={changeTerm}/>

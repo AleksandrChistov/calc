@@ -5,12 +5,12 @@ import { Provider } from "react-redux";
 
 import style from "./index.styl";
 import App from './containers/app';
-import reducer from "./redux/reducers/reducer";
+import rootReducer from "./redux/reducers/reducer";
 
- const store = createStore(reducer);
+ const store = createStore(rootReducer);
 
  ReactDOM.render(
    <Provider store={store}>
-    <App/>
+    <App />
   </Provider>, 
 document.querySelector('#app'));

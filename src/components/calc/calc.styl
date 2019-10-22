@@ -1,4 +1,214 @@
-.home-block
+.title
+  text-align center
+  text-transform uppercase
+  font-size 16px
+
+.wrap-calc
+  margin 10px 20px
+  border 1px solid #cccccc
   display flex
   justify-content space-between
+
+.calc-left
+  flex-basis 60%
+  display flex
+  flex-direction column
+
+.calc-right
+  flex-basis 40%
+  display flex
   flex-wrap wrap
+  padding 50px 20px
+
+.calc-left-top
+  display flex
+  flex-wrap wrap
+  align-items center
+  padding 100px 20px 20px
+  background-color #DAE1E7
+
+.calc-left-bottom
+  padding 20px 20px 0
+  background-color #F7F7F7
+  height 100%
+
+.term-invest
+  margin-bottom 30px
+
+.txt-sum
+  flex-basis 50%
+
+.sum
+  flex-basis 46%
+  padding 0
+  border 1px solid #cccccc
+  border-radius 20px
+  text-align center
+  font-size 24px
+  background-color #fff
+
+.runner
+  flex-basis 100%
+  -webkit-appearance none
+  outline none
+  border 1px solid #6E7E93
+  height 2px
+  z-index 1
+  &:hover, &:active
+    background -webkit-linear-gradient(left ,#8870FF 0%,#8870FF 25%,#fff 25%, #fff 100%)
+  &::-webkit-slider-thumb
+    -webkit-appearance none
+    width 24px
+    height 24px
+    border-radius 50%
+    border 1px solid #cccccc
+    background-color #fff
+    cursor pointer
+
+.wrap-amount-runner
+  list-style none
+  flex-basis 100%
+  padding 20px 0
+  margin 0
+  position relative
+
+.amount-runner
+  position absolute
+  bottom 0
+  font-size 16px
+
+.amount-runner-50
+  left 0
+
+.amount-runner-500
+  left 14.2%
+
+.amount-runner-1000
+  left 28.6%
+
+.amount-runner-2000
+  left 59.6%
+
+.amount-runner-3000
+  right 0
+  display flex
+  flex-direction column
+  align-items flex-end
+
+.hr-amount-runner
+  height 10px
+  width 1px
+  border 1px solid #555555
+  margin 0
+
+.hr-amount-runner-500, .hr-amount-runner-1000,
+.hr-amount-runner-2000
+  margin 0 auto
+
+.wrap-invest-period
+  list-style none
+  display flex
+  justify-content space-between
+  padding 0
+  max-width 85%
+  font-size 12px
+
+.btn-period
+  border 1px solid #cccccc
+  border-radius 20px
+  padding 4px 10px
+  background-color #fff
+  &:hover
+    cursor pointer
+    background-color #0093FF
+    color #fff
+
+.btn-period-active
+  background-color #0093ff
+  color #fff
+
+.line
+  flex-basis 100%
+  height 1px
+  background-color #cccccc
+  border none
+
+.wrap-sum-invest
+  display flex
+  flex-direction column
+  align-items center
+  flex-basis: 40%
+  margin 0 30px 20px 0
+  align-self flex-end
+
+.wrap-increase-divvy
+  display flex
+  flex-direction column
+  align-items center
+  flex-basis 40%
+  align-self flex-end
+  margin-bottom 20px
+
+.sum-invest
+  font-size 24px
+  margin 0
+
+.txt-sum-invest
+  margin 0
+
+.txt-increase-divvy
+  text-align center
+  margin 0
+
+.increase-divvy
+  font-size 24px
+  margin 0
+
+.number-increase-divvy-percent
+  font-size 26px
+
+.wrap-divvy-value
+  display flex
+  flex-direction column
+  align-items center
+  flex-basis 100%
+  margin-top 30px
+
+.txt-divvy-value
+  margin 0
+  font-size 20px
+
+.divvy-value
+  margin 0 0 20px
+  font-size 50px
+
+.txt-increase-divvy-percent
+  margin 10px 0 15px
+
+.btn-get
+  border 0
+  background-color #FFC400
+  border-radius 20px
+  width 220px
+  height 40px
+  text-transform uppercase
+  color #624700
+  max-width 100%
+  &:hover
+    cursor pointer
+    background-color #ffd650
+  &:active, &:focus
+    outline none
+
+.hr-sum-invest
+  width 100%
+  height 20px
+  border 0
+  background-color #ccc
+
+.hr-increase-divvy
+  width 100%
+  height 20px
+  border 0
+  border-top 5px solid #0093FF
+  background-color #ccc
