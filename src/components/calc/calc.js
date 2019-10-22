@@ -42,15 +42,17 @@ function Calc(props) {
             <BtnTerm state={state} changeTerm={changeTerm}/>
         </div>
         <div className="calc-right">
-          <div className="wrap-sum-invest">
-            <p className="txt-sum-invest">Инвестиции</p>
-            <p className="sum-invest">{sum} &#8381;</p>
-            <hr className="hr-sum-invest"/>
-          </div>
-          <div className="wrap-increase-divvy">
-            <p className="txt-increase-divvy">Прирост стоимости паев</p>
-            <p className="increase-divvy">{increaseValue} &#8381;</p>
-            <hr className="hr-increase-divvy" style={{borderTop: ""+25 / 100 * parseFloat(increase)+"px solid #0093ff"}}/>
+          <div className="wrap-sum-and-increase">
+            <div className="wrap-sum-invest">
+              <p className="txt-sum-invest">Инвестиции</p>
+              <p className="sum-invest">{sum} &#8381;</p>
+              <hr className="hr-sum-invest"/>
+            </div>
+            <div className="wrap-increase-divvy">
+              <p className="txt-increase-divvy">Прирост стоимости паев</p>
+              <p className="increase-divvy">{increaseValue} &#8381;</p>
+              <hr className="hr-increase-divvy" style={{borderTop: ""+25 / 100 * parseFloat(increase)+"px solid #0093ff"}}/>
+            </div>
           </div>
           <hr className="line"/>
           <p className="txt-increase-divvy-percent">Прирост стоимости паев 

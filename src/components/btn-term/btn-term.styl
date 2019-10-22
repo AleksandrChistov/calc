@@ -11,7 +11,7 @@
   display flex
   justify-content space-between
   padding 0
-  max-width 85%
+  max-width 90%
   font-size 12px
 
 .btn-period
@@ -27,3 +27,16 @@
 .btn-period-active
   background-color #0093ff
   color #fff
+
+@media (max-width 825px)
+  .wrap-invest-period
+    max-width 100%
+  .btn-period
+    flex-basis 20%
+    text-align center
+
+@media (max-width 505px)
+  .wrap-invest-period
+    flex-direction column
+  .btn-period
+    padding 10px 0
