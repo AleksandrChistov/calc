@@ -2,7 +2,7 @@ import React from 'react';
 import style from './calc.styl'
 
 function Calc(props) {
-  // const { load } = props;
+  const { state, changeTerm } = props;
 
   return (
     <React.Fragment>
@@ -12,7 +12,7 @@ function Calc(props) {
           <div className="calc-left-top">
             <p className="txt-sum">Сумма для инвестирования</p>
             <p className="sum"></p>
-            <input type="range" min="50" max="3000" value="1000" step="50"></input>
+            <input onChange={(e) => changeTerm(e)} className="runner" type="range" min="0" max="3000" value={state.value} step="50"></input>
           </div>
           <div className="calc-left-bottom">
             <p className="term-invest">Срок инвестирования</p>

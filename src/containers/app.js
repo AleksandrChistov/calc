@@ -2,26 +2,26 @@ import React from "react";
 import { connect } from 'react-redux';
 
 import Calc from '../components/calc/calc';
-// import { load } from "../redux/actions/index";
+import { changeTerm } from "../redux/actions/index";
 
-let App = (props) => {  
-  // const { load } = props; 
+let App = (props) => {
+  const { state } = props; 
   return (
     <React.Fragment>
-      <Calc/>
+      <Calc state={state} changeTerm={changeTerm}/>
     </React.Fragment>
   )
 }
 
 function mapStateToProps(state) {
   return {
-    term: state.term
+    state: state
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    load: (term) => dispatch(load(term))
+    changeTerm: (e) => dispatch(changeTerm(e))
   }
 }
 

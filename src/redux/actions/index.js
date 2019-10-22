@@ -1,6 +1,6 @@
-export function changeTerm(term) {
+export function changeTerm(e) {
   return {
     type: 'CHANGE_TERM',
-    term
+    e
   }
 }

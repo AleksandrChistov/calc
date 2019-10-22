@@ -1,16 +1,16 @@
 const initialState = {
-  term: 36
+  term: 1000
 }
 
-function loadReducer(state = initialState, action) {
+function reducer(state = initialState, action) {
   switch (action.type) {
     case 'CHANGE_TERM':
       return {
-        term: action.term
+        term: action.e
       }     
     default:
       return state;
   }
 }
 
-export default loadReducer;
+export default reducer;
