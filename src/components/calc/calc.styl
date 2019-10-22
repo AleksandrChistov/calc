@@ -51,13 +51,32 @@
   flex-basis 100%
   -webkit-appearance none
   outline none
-  border 1px solid #6E7E93
+  border 0
   height 2px
   z-index 1
+  margin 20px 0 0
+  background -webkit-linear-gradient(left, #0093ff 0%, #0093ff 33%, #6E7E93 33%, #6E7E93 100%)
   &:hover, &:active
-    background -webkit-linear-gradient(left ,#8870FF 0%,#8870FF 25%,#fff 25%, #fff 100%)
+    cursor pointer
   &::-webkit-slider-thumb
     -webkit-appearance none
+    width 24px
+    height 24px
+    border-radius 50%
+    border 1px solid #cccccc
+    background-color #fff
+    cursor pointer
+  &::-moz-range-track
+    flex-basis 100%
+    -moz-appearance none
+    outline none
+    border 0
+    height 2px
+    z-index 1
+    margin 20px 0 0
+    background -moz-linear-gradient(left, #0093ff 0%, #0093ff 33%, #6E7E93 33%, #6E7E93 100%)
+  &::-moz-range-thumb
+    -moz-appearance none
     width 24px
     height 24px
     border-radius 50%
@@ -81,13 +100,13 @@
   left -1%
 
 .amount-runner-500
-  left 14.1%
+  left 13.6%
 
 .amount-runner-1000
   left 28.6%
 
 .amount-runner-2000
-  left 59.6%
+  left 60.1%
 
 .amount-runner-3000
   right -15px

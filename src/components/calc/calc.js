@@ -4,9 +4,8 @@ import style from './calc.styl'
 function Calc(props) {
   const { state, changeTerm } = props;
   
-  if (state.term) {
+  const sum = new Intl.NumberFormat('ru-RU').format(state.sum);
 
-  }
   return (
     <React.Fragment>
       <h1 className="title">Калькулятор</h1>
@@ -14,9 +13,11 @@ function Calc(props) {
         <div className="calc-left">
           <div className="calc-left-top">
             <p className="txt-sum">Сумма для инвестирования</p>
-            <p className="sum">{state.sum} &#8381;</p>
+            <p className="sum">{sum} &#8381;</p>
             <input onChange={(e) => changeTerm(e.target.value)} className="runner" 
-            type="range" min="0" max="3000" value={state.sum} step="50"></input>
+            type="range" min="0" max="3000000" value={state.sum} step="50000" style={{background:
+              "-webkit-linear-gradient(left, #0093ff 0%, #0093ff "+state.sum * 0.1 / 3000+"%, #6E7E93 "+state.sum * 0.1 / 3000+"%, #6E7E93 100%)"
+            }}></input>
             <ul className="wrap-amount-runner">
               <li className="amount-runner amount-runner-50"><hr className="hr-amount-runner hr-amount-runner-50"/> 50 т.</li>
               <li className="amount-runner amount-runner-500"><hr className="hr-amount-runner hr-amount-runner-500"/> 500 т.</li>
@@ -39,7 +40,7 @@ function Calc(props) {
         <div className="calc-right">
           <div className="wrap-sum-invest">
             <p className="txt-sum-invest">Инвестиции</p>
-            <p className="sum-invest">{state.sum} &#8381;</p>
+            <p className="sum-invest">{sum} &#8381;</p>
             <hr className="hr-sum-invest"/>
           </div>
           <div className="wrap-increase-divvy">

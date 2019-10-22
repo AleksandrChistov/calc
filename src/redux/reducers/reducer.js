@@ -1,5 +1,5 @@
 const initialState = {
-  sum: 1000,
+  sum: 1000000,
   term: 36
 }
 
