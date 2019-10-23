@@ -32,11 +32,11 @@ function Calc(props) {
               "-webkit-linear-gradient(left, #0093ff 0%, #0093ff "+state.sum * 0.1 / 3000+"%, #6E7E93 "+state.sum * 0.1 / 3000+"%, #6E7E93 100%)"
             }}></input>
             <ul className="wrap-amount-runner">
-              <li className="amount-runner amount-runner-50"><hr className="hr-amount-runner hr-amount-runner-50"/> 50 т.</li>
-              <li className="amount-runner amount-runner-500"><hr className="hr-amount-runner hr-amount-runner-500"/> 500 т.</li>
-              <li className="amount-runner amount-runner-1000"><hr className="hr-amount-runner hr-amount-runner-1000"/> 1000 т.</li>
-              <li className="amount-runner amount-runner-2000"><hr className="hr-amount-runner hr-amount-runner-2000"/> 2000 т.</li>
-              <li className="amount-runner amount-runner-3000"><hr className="hr-amount-runner hr-amount-runner-3000"/> 3000 т.</li>
+              <li className="amount-runner amount-runner-50">50 т.</li>
+              <li className="amount-runner amount-runner-500">500 т.</li>
+              <li className="amount-runner amount-runner-1000">1000 т.</li>
+              <li className="amount-runner amount-runner-2000">2000 т.</li>
+              <li className="amount-runner amount-runner-3000">3000 т.</li>
             </ul>
           </div>
             <BtnTerm state={state} changeTerm={changeTerm}/>

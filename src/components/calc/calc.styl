@@ -82,45 +82,48 @@
   padding 20px 0
   margin 0
   position relative
+  display flex
+  justify-content space-between
 
 .amount-runner
-  position absolute
-  bottom 0
   font-size 16px
+  &::before
+    content "|"
+    position absolute
+    top 5px
+    font-size 10px
+    font-weight 700
+    color #000000
 
 .amount-runner-50
-  left -1%
+  flex-grow 1
+  &::before
+    left 0%
 
 .amount-runner-500
-  left 13.5%
+  flex-grow 1
+  &::before
+    left 18%
 
 .amount-runner-1000
-  left 28%
+  flex-grow 1
+  &::before
+    left 33.5%
 
 .amount-runner-2000
-  left 59.2%
+  flex-grow 2
+  display flex
+  justify-content flex-end
+  &::before
+    left 65%
 
 .amount-runner-3000
-  right -15px
+  flex-grow 2
   display flex
   flex-direction column
   align-items flex-end
-
-.hr-amount-runner
-  height 10px
-  width 1px
-  border 1px solid #555555
-  margin 0
-
-.hr-amount-runner-500, .hr-amount-runner-1000,
-.hr-amount-runner-2000
-  margin 0 auto
-
-.hr-amount-runner-50
-  margin 0 5px 0
-
-.hr-amount-runner-3000
-  margin 0 15px 0
+  &::before
+    right 0%
 
 .line
   flex-basis 100%
@@ -217,12 +220,10 @@
 @media (max-width 825px)
   .wrap-calc
     flex-direction column
-  .amount-runner-1000
-    left 30.3%
-  .amount-runner-500
-    left 14.8%
-  .amount-runner-2000
-    left 62.6%
+  .amount-runner-500::before
+    left 17.5%
+  .amount-runner-2000::before
+    left 65.5%
   .txt-increase-divvy-percent
     margin 10px auto 20px
   .btn-get
@@ -232,12 +233,10 @@
     flex-basis 45%
 
 @media (max-width 505px)
-  .amount-runner-500
-    left 13.3%
-  .amount-runner-1000
-    left 27.8%
-  .amount-runner-2000
-    left 59.1%
+  .amount-runner-500::before
+    left 18%
+  .amount-runner-2000::before
+    left 65%
   .sum
     flex-basis 100%
     margin-top 10px
